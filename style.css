@@ -1,0 +1,33 @@
+
+.canvas {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border: black;
+}
+
+/*#create a class for a textbox that sits on top of everything else in the middle of the screen and has a fade in animation*/
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeIn 2s;
+  font-size: 5vh;
+  font-family: 'Lucida Sans';
+}
+
+
