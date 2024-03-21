@@ -1,4 +1,8 @@
 console.log("hello");
+
+status = "start";
+choosenPercentage = 0;
+
         function main(){
             document.getElementById('callToAction').innerHTML = "Where in your life are you at right now?";
             adjustCanvasSize();
@@ -11,11 +15,23 @@ console.log("hello");
             ctx.fillStyle = 'white';
             ctx.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
             //#add an image into the canvas
+
+            const imgHeightFactor = 0.5;
             const img = new Image();	
             img.src = 'timeline.png';
             img.onload = function() {
-                ctx.drawImage(img, 0, canvas.height - (canvas.width*0.2), canvas.width, canvas.width*0.2);
+                ctx.drawImage(img, 0, canvas.height - (canvas.width*imgHeightFactor), canvas.width, canvas.width*imgHeightFactor);
             }
+            const img2 = new Image();
+            img2.src = 'timeline_green.png';
+            img2.onload = function() {
+                sw = img.width*choosenPercentage;
+                sh = img.height;
+                ctx.drawImage(img2, 0, 0, sw, sh, 0, canvas.height - (canvas.width*imgHeightFactor), canvas.width*choosenPercentage, canvas.width*imgHeightFactor);
+               /* ctx.drawImage(img2, 
+                    0, canvas.height - (canvas.width*imgHeightFactor), 
+                    canvas.width*choosenPercentage, canvas.width*imgHeightFactor, 0, canvas.height - (canvas.width*imgHeightFactor), canvas.width*choosenPercentage, canvas.width*imgHeightFactor);
+               */ }
         }
 
         function adjustCanvasSize(){
@@ -41,6 +57,11 @@ console.log("hello");
             x = x * canvas.width / canvas.clientWidth;
             y = y * canvas.height / canvas.clientHeight;
 
+            if(status == "start"){
+            choosenPercentage = x / canvas.width;
+            }
+            drawTimeline();
+
             console.log(x, y);
             //draw a circle at the click location
             const ctx = canvas.getContext('2d');
@@ -57,11 +78,13 @@ console.log("hello");
         }
 
         window.onresize = function() {
+            console.log("resize");
             main();
         }
         
         window.onload = function() {
             canvas = document.getElementById('canvas');
             canvas.addEventListener('click', canvasClicked);
+
             main();
         }
