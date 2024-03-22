@@ -1,0 +1,118 @@
+
+.slider {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 30px;
+    width: 800px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #ddd;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #04AA6D;
+    border-radius: 1.3px;
+}
+
+.slider::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: #04AA6D;
+    border-radius: 1.3px;
+}
+
+.text-label {
+    color: rgb(82, 82, 82);
+    font-size: 50px; /* make the font size larger */
+    width: 500px; /* adjust this to set the width of the label */
+    position: absolute;
+    top: 20px; /* adjust these two values to position the label as desired */
+    left: 50px;
+    text-align: center;
+}
+
+.text-label2 {
+    color: rgb(82, 82, 82);
+    font-size: 30px; /* make the font size larger */
+    width: 400px; /* adjust this to set the width of the label */
+    position: absolute;
+    top: 400px; /* adjust these two values to position the label as desired */
+    left: 90px;
+    text-align: center;
+}
+ul#rangeslide {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none
+}
+
+#Enviroment{
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#Social{
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#Sustainability{
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#button-container {
+    position: absolute;
+    top: 300px; /* adjust as needed */
+    left: 50%; /* adjust as needed */
+    transform: translate(-50%, -50%); /* this keeps it centered regardless of its dimensions */
+}
+
+#button-container2 {
+    position: absolute;
+    top: 300px; /* adjust as needed */
+    left: 25%; /* adjust as needed */
+    transform: translate(-50%, -50%); /* this keeps it centered regardless of its dimensions */
+}
+
+#button-container3 {
+    position: absolute;
+    top: 300px; /* adjust as needed */
+    left: 75%; /* adjust as needed */
+    transform: translate(-50%, -50%); /* this keeps it centered regardless of its dimensions */
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fineline</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <p id="test"  class="text-label">How these descisions can really impact your life</p>
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='Images/Enviroment visualization smaller.png') }}" alt="Description">
+    </div>
+    
+   
+  </body>
+</html>

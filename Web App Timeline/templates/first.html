@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Fineline</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 140vh;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+        <p id="test" style="display: none;" class="text-label">What is important to you?</p>
+    </div>
+
+    <div id="button-container">
+        <form method="POST" action="/dataVisualization">
+            <button id="Enviroment" type="submit" style="display: none;">Enviromental Influence</button>
+            <input type="hidden" name="button_id" value="Enviroment">
+        </form>
+        
+    </div>
+
+    <div id="button-container2">
+        <button id="Social" style="display: none;">Social Responsability</button>
+        
+    </div>
+
+    <div id="button-container3">
+        <button id="Sustainability" style="display: none;">Sustainability</button>
+        
+    </div>
+
+
+    <div>
+        <p class="text-label2">Long Term investment, or short Term (in years)</p>
+        <input type="range" min="1" max="100" value="3" class="slider" id="myRange">
+        <ul id="rangeslide">
+            <li>5</li>
+            <li>10</li>
+            <li>15</li>
+            <li>20</li>
+            <li>25</li>
+        </ul>
+        
+    </div>
+
+
+    <script>
+var slider =document.getElementById("myRange");
+    slider.style.background = "linear-gradient(90deg, #04AA6D " + slider.value + "%, #ddd " + slider.value + "%)";
+slider.oninput = function() {
+    this.style.background = "linear-gradient(90deg, #04AA6D " + this.value + "%, #ddd " + this.value + "%)";
+}
+slider.onchange = function() {
+  document.getElementById("Enviroment").style.display = "block";
+  document.getElementById("Social").style.display = "block";
+  document.getElementById("Sustainability").style.display = "block";
+  document.getElementById("test").style.display = "block";
+};
+    </script>
+   
+  </body>
+</html>

@@ -1,0 +1,66 @@
+{
+    "data": {
+        "listings": [
+            {
+                "lookup": {
+                    "listingCurrency": "EUR",
+                    "listingShortName": "Ecofi Tresoreri C",
+                    "listingStatus": "NOT_LISTED",
+                    "marketShortName": "EPF EUR"
+                },
+                "lookupStatus": "FOUND",
+                "requestedId": "FR0000293698_3230",
+                "requestedScheme": "ISIN_BC",
+                "marketData": {
+                    "endOfDayHistory": [
+                        {
+                            "close": 10808.32,
+                            "last": 10808.32,
+                            "sessionDate": "2019-01-01"
+                        },
+                        {
+                            "close": 10808.23,
+                            "last": 10808.23,
+                            "sessionDate": "2019-01-02"
+                        },
+                        {
+                            "close": 10778.23,
+                            "last": 10778.23,
+                            "sessionDate": "2020-01-01"
+                        },
+                        {
+                            "close": 10778.13,
+                            "last": 10778.13,
+                            "sessionDate": "2020-01-02"
+                        },
+                        {
+                            "close": 10708.38,
+                            "last": 10708.38,
+                            "sessionDate": "2022-01-02"
+                        },
+                        {
+                            "close": 10723.87,
+                            "last": 10723.87,
+                            "sessionDate": "2023-01-01"
+                        },
+                        {
+                            "close": 10724.32,
+                            "last": 10724.32,
+                            "sessionDate": "2023-01-02"
+                        },
+                        {
+                            "close": 11099.03,
+                            "last": 11099.03,
+                            "sessionDate": "2024-01-01"
+                        },
+                        {
+                            "close": 11100.22,
+                            "last": 11100.22,
+                            "sessionDate": "2024-01-02"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+ }
